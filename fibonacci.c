@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-long long fibonacci(int n){
-	long long fibonacci_num[n];
+unsigned long long fibonacci(int n){
+	unsigned long long fibonacci_num[n+1];
 	fibonacci_num[0] = 0;
 	fibonacci_num[1] = 1;
 
