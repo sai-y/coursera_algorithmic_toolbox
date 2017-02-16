@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-int MaxPairwiseProduct(int* numbers, int sizeofArray) {
-  int result = 0;
+long long MaxPairwiseProduct(int* numbers, int sizeofArray) {
+  long long result = 0;
 
   for (int i = 0; i < sizeofArray; ++i) {
     for (int j = i + 1; j < sizeofArray; ++j) {
-      if (numbers[i] * numbers[j] > result) {
-        result = numbers[i] * numbers[j];
+      if (((long long)numbers[i]) * numbers[j] > result) {
+        result = ((long long)numbers[i]) * numbers[j];
       }
     }
   }
@@ -21,7 +21,7 @@ int main(void){
 
 	while (i < n && scanf("%d", &numbers[i++]) == 1);
 
-	int result = MaxPairwiseProduct(numbers, n);
-    printf("%d\n", result);
+	long long result = MaxPairwiseProduct(numbers, n);
+    printf("%lld\n", result);
     return 0;
 }
